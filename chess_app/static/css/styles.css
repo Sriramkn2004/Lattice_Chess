@@ -1,0 +1,132 @@
+
+
+body {
+    
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+#chess-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chessboard {
+    display: grid;
+    grid-template-columns: 40px repeat(8, 80px);
+    grid-template-rows: 40px repeat(8, 80px);
+    width: 680px;
+    height: 680px;
+    margin: auto;
+    border: 4px solid #444; /* Debugging Border */
+    background-color: #222;
+    position: relative;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.white {
+    background-color: #f0d9b5;
+    color: black;
+}
+
+.black {
+    background-color: #b58863;
+    color: white;
+}
+
+.selected {
+    background-color: gold !important;
+    border: 3px solid red;
+}
+
+.last-move {
+    background-color: lightgreen !important;
+}
+
+.valid-move {
+    background-color: rgba(0, 0, 255, 0.5) !important;
+    border-radius: 50%;
+}
+
+/* Row & Column Labels */
+.rank-label, .file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+}
+
+@media (max-width: 600px) {
+    #chessboard {
+        grid-template-columns: 30px repeat(8, 60px);
+        grid-template-rows: 30px repeat(8, 60px);
+        width: 500px;
+        height: 500px;
+    }
+
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
+    }
+}
+.white-piece {
+    color: white;
+}
+
+.black-piece {
+    color: black;
+}
+.valid-move {
+    background-color: rgba(0, 0, 255, 0.5) !important;
+    border-radius: 50%;
+}
+#win-predictor {
+    width: 300px;
+    height: 20px;
+    border: 2px solid black;
+    display: flex;
+    margin: 10px auto;
+}
+
+#win-bar {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.win-section {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+    color: white;
+}
+
+#win-white {
+    background-color: blue;
+    width: 50%;
+}
+
+#win-black {
+    background-color: red;
+    width: 50%;
+}
+
